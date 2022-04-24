@@ -1,5 +1,6 @@
 import React from "react";
 import { HiDownload } from "react-icons/hi";
+import myResume from "../assets/myResume.pdf";
 const Home = () => {
   return (
     <div className="bg-[#34495E] w-full h-screen" name="/">
@@ -18,12 +19,14 @@ const Home = () => {
           focused on building responsive full-stack web applications.
         </p>
         <div>
-          <button className=" group text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 rounded">
-            Download Resume
-            <span className="">
-              <HiDownload className="ml-2" />
-            </span>
-          </button>
+         <a href={myResume} download="myResume" target="_blank">
+            <button className=" group text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 rounded">
+              Download CV
+              <span className="">
+                <HiDownload className="ml-2" />
+              </span>
+            </button>
+          </a>
         </div>
       </div>
     </div>
